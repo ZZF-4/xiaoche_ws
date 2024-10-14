@@ -1,0 +1,8 @@
+prefix=/home/agilex/xiaoche_ws/install
+
+Name: zuoye
+Description: Description of zuoye
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

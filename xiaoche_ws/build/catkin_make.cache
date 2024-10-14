@@ -1,0 +1,2 @@
+zuoye
+-DCATKIN_DEVEL_PREFIX=/home/agilex/xiaoche_ws/devel -DCMAKE_INSTALL_PREFIX=/home/agilex/xiaoche_ws/install -G Unix Makefiles
