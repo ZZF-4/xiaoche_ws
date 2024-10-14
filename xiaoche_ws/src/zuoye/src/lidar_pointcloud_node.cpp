@@ -35,7 +35,7 @@ void cloud_cb (const sensor_msgs::PointCloud2ConstPtr& input)
   cloud1.reset (new pcl::PointCloud<pcl::PointXYZ>);
   pcl::fromROSMsg (*input, *cloud1);
 //  pcl::visualization::CloudViewer viewer ("Simple Cloud Viewer");
-//  viewer.showCloud(cloud1,"Simple Cloud Viewer");
+//  viewer.showCloud(cloud1,"Simple Cloud Viewer") ;
   viewer1->removeAllPointClouds();  // 移除当前所有点云
   viewer1->addPointCloud(cloud1, "realtime pcl");
   viewer1->updatePointCloud(cloud1, "realtime pcl");
