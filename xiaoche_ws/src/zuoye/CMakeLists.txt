@@ -20,7 +20,9 @@ find_package(catkin REQUIRED COMPONENTS
   geometry_msgs
   tf
   eigen_conversions
+  //nav_msgs 
   nav_msgs 
+
   image_transport
 #pcl
 #  OpenCV
