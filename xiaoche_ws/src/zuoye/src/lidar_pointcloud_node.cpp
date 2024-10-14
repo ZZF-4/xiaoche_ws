@@ -7,16 +7,12 @@
 #include <pcl/io/io.h>
 #include <pcl/point_types.h>
 #include <pcl/point_cloud.h>
-
-
 // #include <pcl/filters/statistical_outlier_removal.h>   //统计滤波
 // #include <pcl/filters/random_sample.h>    //随机采样
 // #include <pcl/filters/voxel_grid.h>      //体素滤波
 // #include <pcl/filters/passthrough.h>     //直通滤波
-
 #include <pcl/visualization/pcl_visualizer.h>
 #include <boost/thread/thread.hpp>
- 
 #include <pcl_conversions/pcl_conversions.h>
 using namespace std;
 boost::shared_ptr<pcl::visualization::PCLVisualizer> viewer1(new pcl::visualization::PCLVisualizer("realtime pcl"));
@@ -38,10 +34,8 @@ void cloud_cb (const sensor_msgs::PointCloud2ConstPtr& input)
   pcl::PointCloud<pcl::PointXYZ>::Ptr cloud1;
   cloud1.reset (new pcl::PointCloud<pcl::PointXYZ>);
   pcl::fromROSMsg (*input, *cloud1);
- 
 //  pcl::visualization::CloudViewer viewer ("Simple Cloud Viewer");
 //  viewer.showCloud(cloud1,"Simple Cloud Viewer");
- 
   viewer1->removeAllPointClouds();  // 移除当前所有点云
   viewer1->addPointCloud(cloud1, "realtime pcl");
   viewer1->updatePointCloud(cloud1, "realtime pcl");
